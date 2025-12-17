@@ -3,6 +3,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module'; // <<< Vérifiez cette ligne
 import { AuthModule } from './auth/auth.module';
+import { SparePartsModule } from './spare-parts/spare-parts.module';
 
 @Module({
   imports: [
@@ -17,7 +18,8 @@ import { AuthModule } from './auth/auth.module';
       synchronize: true, // Laisse à TRUE pour la création automatique des tables en dev
     }),
     UsersModule,
-    AuthModule, // <<< Et cette ligne
+    AuthModule,
+    SparePartsModule, // <<< Et cette ligne
   ],
   controllers: [],
   providers: [],
