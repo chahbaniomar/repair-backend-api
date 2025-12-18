@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module'; // <<< Vérifiez cette ligne
 import { AuthModule } from './auth/auth.module';
 import { SparePartsModule } from './spare-parts/spare-parts.module';
+import { RepairsModule } from './repairs/repairs.module';
 
 @Module({
   imports: [
@@ -19,7 +20,8 @@ import { SparePartsModule } from './spare-parts/spare-parts.module';
     }),
     UsersModule,
     AuthModule,
-    SparePartsModule, // <<< Et cette ligne
+    SparePartsModule,
+    RepairsModule, // <<< Et cette ligne
   ],
   controllers: [],
   providers: [],
